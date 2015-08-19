@@ -1,0 +1,25 @@
+{
+	"require": {
+		"php": ">=5.3",
+		"skyzyx/mimetypes": "~1.1",
+		"apfelbox/php-file-download": "2.*",
+		"phpoffice/phpexcel": "1.8.*",
+		"phpmailer/phpmailer": "5.*",
+		"mpdf/mpdf": "5.*",
+		"adodb/adodb-php": "5.19",
+		"raveren/kint": "v0.9",
+		"phpfastcache/phpfastcache": "3.0.*",
+		"foolz/sphinxql-query-builder": "0.9.*"
+	},
+	"autoload": {
+		"classmap": [
+			"App/Managers",
+			"App/Helpers",
+			"App/Lang",
+			"App/Config"
+		],
+        "psr-4": {
+            "Sicex\\": "App/Core"
+        }
+    }
+}

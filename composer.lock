@@ -1,0 +1,465 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "583ef4e001576554b9cc2bfc4153892e",
+    "packages": [
+        {
+            "name": "adodb/adodb-php",
+            "version": "v5.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ADOdb/ADOdb.git",
+                "reference": "773bb9b7ccd81b403bf75f7ef476c3f2d7ee04de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ADOdb/ADOdb/zipball/773bb9b7ccd81b403bf75f7ef476c3f2d7ee04de",
+                "reference": "773bb9b7ccd81b403bf75f7ef476c3f2d7ee04de",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "adodb.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1",
+                " BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "John Lim",
+                    "email": "jlim@natsoft.com",
+                    "role": "Author"
+                },
+                {
+                    "name": "Damien Regad",
+                    "role": "Current maintainer"
+                }
+            ],
+            "description": "ADOdb is a PHP database abstraction layer library",
+            "homepage": "http://adodb.sourceforge.net/",
+            "keywords": [
+                "database"
+            ],
+            "time": "2014-04-23 14:37:03"
+        },
+        {
+            "name": "apfelbox/php-file-download",
+            "version": "v2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apfelbox/PHP-File-Download.git",
+                "reference": "01b0461e02e7514ccb8804cee9260e0b61e04069"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apfelbox/PHP-File-Download/zipball/01b0461e02e7514ccb8804cee9260e0b61e04069",
+                "reference": "01b0461e02e7514ccb8804cee9260e0b61e04069",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3",
+                "skyzyx/mimetypes": "~1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Apfelbox\\FileDownload\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jannik Zschiesche",
+                    "email": "hello@apfelbox.net",
+                    "homepage": "http://apfelbox.net"
+                }
+            ],
+            "description": "A library to help with creating downloads for files in PHP",
+            "homepage": "https://github.com/apfelbox/PHP-File-Download",
+            "keywords": [
+                "download"
+            ],
+            "time": "2014-02-10 17:12:20"
+        },
+        {
+            "name": "foolz/sphinxql-query-builder",
+            "version": "0.9.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FoolCode/SphinxQL-Query-Builder.git",
+                "reference": "b5c1c60f5101fd2278099e639bcdffbdbc388680"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FoolCode/SphinxQL-Query-Builder/zipball/b5c1c60f5101fd2278099e639bcdffbdbc388680",
+                "reference": "b5c1c60f5101fd2278099e639bcdffbdbc388680",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "replace": {
+                "foolz/sphinxql": "self.version"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Foolz\\SphinxQL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "foolz",
+                    "email": "support@foolz.us"
+                }
+            ],
+            "description": "A PHP query builder for SphinxQL. Uses MySQLi to connect to the Sphinx server.",
+            "homepage": "http://www.foolz.us",
+            "keywords": [
+                "database",
+                "query builder",
+                "search",
+                "sphinx",
+                "sphinxql",
+                "sql"
+            ],
+            "time": "2014-11-25 22:28:50"
+        },
+        {
+            "name": "mpdf/mpdf",
+            "version": "v5.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mpdf/mpdf.git",
+                "reference": "f9a374c7ea975ce8c795cec4dfd17ef55addac9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mpdf/mpdf/zipball/f9a374c7ea975ce8c795cec4dfd17ef55addac9c",
+                "reference": "f9a374c7ea975ce8c795cec4dfd17ef55addac9c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=4.3.10"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "mpdf.php",
+                    "classes"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-1.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Ian Back"
+                }
+            ],
+            "description": "A PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support",
+            "homepage": "http://www.mpdf1.com/mpdf/index.php",
+            "keywords": [
+                "pdf",
+                "php",
+                "utf-8"
+            ],
+            "time": "2014-12-14 18:32:11"
+        },
+        {
+            "name": "phpfastcache/phpfastcache",
+            "version": "3.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/khoaofgod/phpfastcache.git",
+                "reference": "cd63b093143322755cf9d6082bba00ecab3a6f69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/khoaofgod/phpfastcache/zipball/cd63b093143322755cf9d6082bba00ecab3a6f69",
+                "reference": "cd63b093143322755cf9d6082bba00ecab3a6f69",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "phpfastcache.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Khoa Bui",
+                    "email": "khoaofgod@gmail.com",
+                    "homepage": "http://www.phpfastcache.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Cache Class - Supported Redis, Cookie, Predis, APC, MemCached, WinCache, Files, PDO, Reduce mySQL Call by Caching",
+            "homepage": "http://www.phpfastcache.com",
+            "keywords": [
+                "APC Cache",
+                "apc",
+                "cache",
+                "cache class",
+                "caching",
+                "cookie",
+                "files cache",
+                "memcache",
+                "memcached",
+                "mysql cache",
+                "pdo cache",
+                "php cache",
+                "predis",
+                "redis",
+                "wincache"
+            ],
+            "time": "2015-08-11 06:22:42"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v5.2.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "07005ecbb80d11ec8c0f067bb37e8909cc7fcbb7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/07005ecbb80d11ec8c0f067bb37e8909cc7fcbb7",
+                "reference": "07005ecbb80d11ec8c0f067bb37e8909cc7fcbb7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "*",
+                "phpunit/phpunit": "4.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class.phpmailer.php",
+                    "class.smtp.php",
+                    "class.pop3.php",
+                    "extras/EasyPeasyICS.php",
+                    "extras/ntlm_sasl_client.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "time": "2015-05-04 12:37:21"
+        },
+        {
+            "name": "phpoffice/phpexcel",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPOffice/PHPExcel.git",
+                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPOffice/PHPExcel/zipball/372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
+                "reference": "372c7cbb695a6f6f1e62649381aeaa37e7e70b32",
+                "shasum": ""
+            },
+            "require": {
+                "ext-xml": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PHPExcel": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Maarten Balliauw",
+                    "homepage": "http://blog.maartenballiauw.be"
+                },
+                {
+                    "name": "Mark Baker"
+                },
+                {
+                    "name": "Franck Lefevre",
+                    "homepage": "http://blog.rootslabs.net"
+                },
+                {
+                    "name": "Erik Tilt"
+                }
+            ],
+            "description": "PHPExcel - OpenXML - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
+            "homepage": "http://phpexcel.codeplex.com",
+            "keywords": [
+                "OpenXML",
+                "excel",
+                "php",
+                "spreadsheet",
+                "xls",
+                "xlsx"
+            ],
+            "time": "2015-05-01 07:00:55"
+        },
+        {
+            "name": "raveren/kint",
+            "version": "v0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raveren/kint.git",
+                "reference": "ada810111ced4e3a926b4040da9b86442e43b613"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raveren/kint/zipball/ada810111ced4e3a926b4040da9b86442e43b613",
+                "reference": "ada810111ced4e3a926b4040da9b86442e43b613",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Kint.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rokas Šleinius",
+                    "homepage": "https://github.com/raveren"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/raveren/kint/contributors"
+                }
+            ],
+            "description": "Kint - debugging helper for PHP developers",
+            "homepage": "https://github.com/raveren/kint",
+            "keywords": [
+                "debug",
+                "kint",
+                "php"
+            ],
+            "time": "2013-08-12 22:46:16"
+        },
+        {
+            "name": "skyzyx/mimetypes",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/skyzyx/mimetypes.git",
+                "reference": "bf8a41a13b187812fd9e71caaeee5c97ea4f0221"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/skyzyx/mimetypes/zipball/bf8a41a13b187812fd9e71caaeee5c97ea4f0221",
+                "reference": "bf8a41a13b187812fd9e71caaeee5c97ea4f0221",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "dflydev/apache-mime-types": "1.0.*@dev",
+                "twig/twig": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Skyzyx\\Components\\Mimetypes": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Parman",
+                    "homepage": "http://ryanparman.com",
+                    "role": "Vanity Developer"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "http://github.com/skyzyx/mimetypes/contributors"
+                }
+            ],
+            "description": "Creates a JSON document containing a thorough list of file extensions => mime types as provided by the Apache httpd project.",
+            "homepage": "http://github.com/skyzyx/mimetypes",
+            "keywords": [
+                "dictionary",
+                "map",
+                "mime",
+                "mimetype"
+            ],
+            "time": "2013-03-31 11:50:02"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3"
+    },
+    "platform-dev": []
+}
