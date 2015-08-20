@@ -1,5 +1,3 @@
 'use strict'
-require('./vendor/jquery-1.11.2.min')
-console.log(jQuery);
-
-//require('./vendor/bootstrap.min')
+import '../../bower_components/jquery/dist/jquery.min.js'
+import '../../bower_components/bootstrap/dist/js/bootstrap.min.js'

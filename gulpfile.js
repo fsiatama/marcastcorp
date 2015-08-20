@@ -15,6 +15,23 @@ var livereload = require('gulp-livereload')
 var bootstrap  = require('bootstrap-styl');
 var rename     = require('gulp-rename');
 
+var bower      = require('main-bower-files')
+var gulpFilter = require('gulp-filter')
+
+
+/********************************** bundle Bower ***************************************/
+
+var publishdir = 'public_html'
+var dist = {
+  all: [publishdir + '/**/*'],
+  css: publishdir + '/assets/',
+  js: publishdir + '/assets/',
+  vendor: publishdir + '/assets/'
+}
+
+gulp.task( 'bower', function () {
+  gulp.src( mainBowerFiles() ).pipe( gulp.dest( "dist/lib" ) );
+});
 
 /********************************** bundle js ***************************************/
 
