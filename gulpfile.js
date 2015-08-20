@@ -1,34 +1,56 @@
-var gulp = require('gulp');
-var stylus = require('gulp-stylus');
-var bootstrap = require('bootstrap-styl');
-
-/*var browserify = require('browserify')
-var babelify = require('babelify')
-var buffer = require('vinyl-buffer')
-var source = require('vinyl-source-stream')*/
-var uglify = require('gulp-uglify')
-
-var jade = require('gulp-jade');
-var rename = require('gulp-rename');
-var concat = require('gulp-concat-css')
-var nib = require('nib')
-var minify = require('gulp-minify-css')
-
-var watchify = require('watchify')
-var assign = require('lodash.assign')
+var gulp       = require('gulp')
+var browserify = require('browserify')
+var jade       = require('gulp-jade');
+var babelify   = require('babelify')
+var buffer     = require('vinyl-buffer')
+var source     = require('vinyl-source-stream')
+var stylus     = require('gulp-stylus')
+var concat     = require('gulp-concat-css')
+var nib        = require('nib')
+var minify     = require('gulp-minify-css')
+var uglify     = require('gulp-uglify')
+var watchify   = require('watchify')
+var assign     = require('lodash.assign')
 var livereload = require('gulp-livereload')
+var bootstrap  = require('bootstrap-styl');
+var rename     = require('gulp-rename');
 
 
 /********************************** bundle js ***************************************/
 
-gulp.task('js', function() {
-  return js()
-})
+var opts = {
+  entries: './frontEndLib/js/main.js',
+  transform: [ babelify ]
+}
+opts = assign({}, watchify.args, opts)
 
 gulp.task('js:watch', function() {
+  var w = watchify( browserify(opts) )
+    console.log(opts)
   
-  return gulp.watch( [ 'frontEndLib/js/**/*.js' ], ['js'] )
+  w.on('update', function(file) {
+    //logica de rebuild
+    console.log(file)
+    var bdle = generateBundle(w).pipe( livereload() )
+    console.log('finish')
+    return bdle
+  })
+  
+  return generateBundle(w).pipe( livereload({ start: true}) )
 })
+
+gulp.task('js', function() {
+  return generateBundle(browserify(opts))
+})
+
+function generateBundle (b) {
+  return b
+  .bundle()
+  .pipe(source('main.js'))
+  .pipe(buffer())
+  .pipe(uglify())
+  .pipe(gulp.dest('./public_html/js/'))
+}
 
 /********************************** bundle stylus ***************************************/
 gulp.task('styl', function() {
