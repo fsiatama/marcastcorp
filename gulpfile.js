@@ -1,38 +1,27 @@
 var gulp       = require('gulp')
 var browserify = require('browserify')
-var jade       = require('gulp-jade');
+var jade       = require('gulp-jade')
 var babelify   = require('babelify')
 var buffer     = require('vinyl-buffer')
 var source     = require('vinyl-source-stream')
 var stylus     = require('gulp-stylus')
-var concat     = require('gulp-concat-css')
+var concat     = require('gulp-concat')
 var nib        = require('nib')
 var minify     = require('gulp-minify-css')
 var uglify     = require('gulp-uglify')
 var watchify   = require('watchify')
 var assign     = require('lodash.assign')
 var livereload = require('gulp-livereload')
-var bootstrap  = require('bootstrap-styl');
-var rename     = require('gulp-rename');
-
-var bower      = require('main-bower-files')
-var gulpFilter = require('gulp-filter')
-
-
-/********************************** bundle Bower ***************************************/
-
-var publishdir = 'public_html'
-var dist = {
-  all: [publishdir + '/**/*'],
-  css: publishdir + '/assets/',
-  js: publishdir + '/assets/',
-  vendor: publishdir + '/assets/'
-}
-
-gulp.task( 'bower', function () {
-  gulp.src( mainBowerFiles() ).pipe( gulp.dest( "dist/lib" ) );
+var bootstrap  = require('bootstrap-styl')
+var rename     = require('gulp-rename')
+var imagemin   = require('gulp-imagemin')
+/********************************** bundle images ***************************************/
+// Gulp task - images
+gulp.task('images', function() {
+  gulp.src('./frontEndLib/img/**')
+    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true, use: [] }))
+    .pipe(gulp.dest('./public_html/img/'));
 });
-
 /********************************** bundle js ***************************************/
 
 var opts = {
@@ -88,7 +77,7 @@ gulp.task('htmlTpl:watch', function() {
   return gulp.watch( [ 'frontEndLib/templates/*.jade' ], ['htmlTpl'] )
 })
 
-gulp.task( 'watch', ['styl:watch', 'htmlTpl:watch', 'js:watch'])
+gulp.task( 'watch', ['styl:watch', 'htmlTpl:watch', 'js:watch', 'images'])
 
 
 function js () {

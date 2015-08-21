@@ -11,11 +11,12 @@ html.no-js(lang='en')
 	head
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-		title
-		meta(name='description', content='')
+		<?= $tpl_header; ?>
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		link(rel='apple-touch-icon', href='apple-touch-icon.png')
 		link(rel='stylesheet', href='css/main.css')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Raleway:400,500,600,700,800,900', rel='stylesheet', type='text/css')
 		script(src='js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')
 	body
 		//if lt IE 8
@@ -25,26 +26,43 @@ html.no-js(lang='en')
 				|  browser. Please 
 				a(href='http://browsehappy.com/') upgrade your browser
 				|  to improve your experience.
-		nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+
+		.top_line
+		// HEADER AREA
+		header
 			.container
-				.navbar-header
-					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-						span.sr-only Toggle navigation
-						span.icon-bar
-						span.icon-bar
-						span.icon-bar
-					a.navbar-brand(href='#') Project name
-				#navbar.navbar-collapse.collapse
-					form.navbar-form.navbar-right(role='form')
-						.form-group
-							input.form-control(type='text', placeholder='Email')
-						.form-group
-							input.form-control(type='password', placeholder='Password')
-						button.btn.btn-success(type='submit') Sign in
-				// /.navbar-collapse
-		// Main jumbotron for a primary marketing message or call to action
-		<?= $tpl_content; ?>
+				.row
+					// HEADER: LOGO AREA
+					.logo.col-sm-4.col-md-4
+						a.logo(href='index.html')
+							img(alt='logo', title='ReDesign', src='img/logo.png')
+					.col-lg-offset-4.col-sm-4.col-md-4
+						// HEADER: PHONE NUMBER
+						p.head_phone
+							i.fa.fa-phone
+							a(href='tel:555-555-5555') (800) 655-7800
+					// HEADER: SOCIAL ICONS
+					ul.socials.list-unstyled
+						li
+							a.flickr(data-rel='tooltip', title='Follow us on Flickr', href='#')
+						li
+							a.twitter(data-rel='tooltip', title='Follow us on Twitter', href='#')
+						li
+							a.facebook(data-rel='tooltip', title='Follow us on Facebook', href='#')
+						li
+							a.youtube(data-rel='tooltip', title='Follow us on Youtube', href='#')
+						li
+							a.dribbble(data-rel='tooltip', title='Follow us on Dribbble', href='#')
+						li
+							a.pinterest(data-rel='tooltip', title='Follow us on Pinterest', href='#')
+
 		
+		<?= $tpl_content; ?>
+
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+		script.
+			window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\\/script>')
+		script(src='js/vendor/bootstrap.min.js')
 		script(src='js/main.js')
 		// Google Analytics: change UA-XXXXX-X to be your site's ID.
 		script.
